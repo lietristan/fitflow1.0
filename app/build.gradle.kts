@@ -52,6 +52,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.navigation:navigation-fragment:2.7.5")
     val nav_version = "2.7.4"
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
