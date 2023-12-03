@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- other style attributes -->
+
+        <!-- Set the windowActionBar to false to prevent the default ActionBar from being shown -->
+<!--        <item name="windowActionBar">true</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+
+        <!-- Customize the ActionBar background to be transparent -->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/lime_green</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+
+</resources>

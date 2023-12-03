@@ -1,13 +1,253 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nav_header_bg"
     tools:context="fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/homebg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#61111311"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-84dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#91E15F"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tdysplan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="4dp"
+        android:text="Today's Plan:"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="8dp"
+        android:text="Your Weekly Schedule"
+        android:textColor="@color/white"
+        android:textSize="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/schedcontainer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="572dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#1A1C19"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/cardbg"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:paddingRight="70dp"
+            android:src="@drawable/cardbg2" />
+
+        <ImageView
+            android:id="@+id/startbtn"
+            android:layout_width="63dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="285dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/startbtn"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <TextView
+            android:id="@+id/dayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="9dp"
+            android:text="Wednesday"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="31dp"
+            android:text="Chest - Triceps"
+            android:textColor="#99FF7D" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4D2E2B2B"
+            android:paddingLeft="15dp"
+            android:paddingTop="95dp"
+            android:paddingRight="10dp"
+            android:text="Status:   Undone"
+            android:textColor="#F36863"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/schedcontainer"
+        android:layout_width="370dp"
+        android:layout_height="450dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="28dp"
+        app:cardBackgroundColor="#41131313"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFriday"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#1A1C19"
+                app:cardCornerRadius="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardTuesday">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sqt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    android:paddingTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#82E159"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leg - Abs"
+                    android:paddingTop="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#CDE4C5"
+                    android:textSize="23dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTuesday"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#1A1C19"
+                app:cardCornerRadius="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardMonday">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday"
+                    android:paddingTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#82E159"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back - Shoulders"
+                    android:paddingTop="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#CDE4C5"
+                    android:textSize="23dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMonday"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="#1A1C19"
+                app:cardCornerRadius="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bicep" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="30dp"
+                    android:text="Monday"
+                    android:textColor="#82E159"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="60dp"
+                    android:text="Biceps - Forearms"
+                    android:textColor="#CDE4C5"
+                    android:textSize="23dp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

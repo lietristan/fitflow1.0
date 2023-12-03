@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
         loginBtn.setOnClickListener{
             val pindahTempat = Intent(this, MainActivity::class.java)
             startActivity(pindahTempat)
+            finish()
         }
     }
 }

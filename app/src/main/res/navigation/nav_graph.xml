@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
-
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.fitflow10.HomeFragment"
+        android:name="fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_testFragment"
-            app:destination="@id/testFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/testFragment"
-        android:name="com.example.fitflow10.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+        android:id="@+id/bmiFragment"
+        android:name="fragment.BmiFragment"
+        android:label="fragment_bmi"
+        tools:layout="@layout/fragment_bmi" />
+    <fragment
+        android:id="@+id/schedulerFragment"
+        android:name="fragment.SchedulerFragment"
+        android:label="fragment_scheduler"
+        tools:layout="@layout/fragment_scheduler" />
 </navigation>
