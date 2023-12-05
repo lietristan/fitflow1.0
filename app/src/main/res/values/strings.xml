@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">fitflow1.0</string>
+    <string name="app_name"></string>
+    <string name="name_hint">Insert your name</string>
+    <string name="name_value">...</string>
+    <string name="button_name_value">Submit</string>
+    <string name="name_greet">Welcome</string>
+    <string name="name_empty">Field is empty!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
